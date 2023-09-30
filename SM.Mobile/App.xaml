@@ -1,0 +1,29 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SM.Mobile"
+             x:Class="SM.Mobile.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
+
+                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+
+                <!--Entry styles-->
+                <ResourceDictionary Source="Resources/Styles/Entries/Entry_base_style.xaml"/>
+                <ResourceDictionary Source="Resources/Styles/Entries/Entry_email_style.xaml"/>
+                <ResourceDictionary Source="Resources/Styles/Entries/Entry_pass_style.xaml"/>
+
+                <!--Button styles-->
+                <ResourceDictionary Source="Resources/Styles/Buttons/Button_base_style.xaml"/>
+                <ResourceDictionary Source="Resources/Styles/Buttons/Button_login_style.xaml"/>
+                <ResourceDictionary Source="Resources/Styles/Buttons/Button_signup_style.xaml"/>
+
+                <!--Label styles-->
+                <ResourceDictionary Source="Resources/Styles/Labels/Label_base_style.xaml"/>
+
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

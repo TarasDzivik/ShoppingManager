@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="SM.Mobile.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SM.Mobile.Views.Pages"
+    Shell.FlyoutBehavior="Disabled"
+    Shell.NavBarIsVisible="false"
+    Shell.BackgroundColor="DarkCyan">
+    
+    <TabBar>
+        <ShellContent
+           Title="LoginPage"
+           ContentTemplate="{DataTemplate local:Login_Page}"
+           Route="LoginPage" />
+        <ShellContent
+           Title="Home"
+           ContentTemplate="{DataTemplate local:Main_Page}"
+           Icon="icon_home" />
+        <ShellContent
+           Title="About"
+           ContentTemplate="{DataTemplate local:About_Page}"
+           Icon="icon_about" />
+        <ShellContent
+           Title="Preferences"
+           ContentTemplate="{DataTemplate local:Preferences_Page}"
+           Icon="icon_prefs" />
+        <ShellContent
+           Title="My Account"
+           ContentTemplate="{DataTemplate local:MyAccount_Page}"
+           Icon="icon_buddies" />
+    </TabBar>
+</Shell>
+    

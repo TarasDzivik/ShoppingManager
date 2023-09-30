@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SM.Mobile.Views.Pages.Login_Page"
+             Title="Login_Page">
+    
+    <!--BOOK at 168 page-->
+    <ScrollView VerticalScrollBarVisibility="Always" HorizontalScrollBarVisibility="Always">
+
+        <VerticalStackLayout Background="#faff" x:Name="LoginStackLayout" VerticalOptions="Fill" >
+            <Grid RowDefinitions="*,*,80">
+                <VerticalStackLayout Background="#faff" Grid.Row="0" VerticalOptions="Center" >
+                    <Grid ColumnDefinitions="*,*,*" 
+                          RowDefinitions="200,*,*,*,*" 
+                          x:Name="LoginGrid">
+                        <Label Text="Login or create account" 
+                               Grid.Column="0"
+                               Grid.ColumnSpan="3"
+                               Grid.Row="1"
+                               Style="{StaticResource l_base}"
+                               TextColor="#51b">
+                        </Label>
+                        <Entry Text="{Binding email}" 
+                               Style="{StaticResource e_email}" 
+                               Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" />
+                        <Entry Text="{Binding Password}"
+                               Style="{StaticResource e_pass}"
+                               Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3"/>
+
+                        <HorizontalStackLayout Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Margin="10,10,10,0" HorizontalOptions="Center" >
+                            <Button Command="{Binding LogInCommand}"
+                                    Style="{StaticResource b_login}" />
+                            <Button Command="{Binding SignUpCommand}"
+                                    Style="{StaticResource b_signup}" />
+                        </HorizontalStackLayout>
+                    </Grid>
+                </VerticalStackLayout>
+                <!--TODO: Bind ActivityIndicator to something, ex: Create account, of check existing Emeil or-->
+                <!--<ActivityIndicator Margin="20" Color="#ffbeaa" IsRunning="{Binding ActivityIndicatorIsRunning}" />-->
+            </Grid>
+            <VerticalStackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" VerticalOptions="End" HorizontalOptions="Center">
+                <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="End" >
+                    <Button Command="{Binding ForgotPasswordCommand}"
+                            Style="{StaticResource b_base}"
+                            BackgroundColor="LightGray"
+                            Text="Forgot Password" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+            <FlexLayout x:Name="ad"
+                        Grid.Row="2" Grid.ColumnSpan="3" VerticalOptions="Center" Opacity="0.70"
+                        HorizontalOptions="Center" Background="gray" HeightRequest="80" 
+                        Wrap="Wrap">
+                <Label Text="============ Here may be your ad... Or may not ==============="
+                       Style="{StaticResource l_base}"
+                       TextColor="#fff"
+                       FontAttributes="None"/>
+            </FlexLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
+
+
+
+
+<!--This code are commented because of it was inicialized in the code behind-->
+
+<!--TODO: hendle ProgressBar and it to the create account steps or whatever else-->
+<!--<ProgressBar ProgressColor="Blue" x:Name="LoginProgressBar" />-->
+
+
+<!--<Label Text="Create account?" x:Name="CreateAccount" HorizontalOptions="Center" Margin="5" FontSize="18"/>-->
+
+<!--this is doesn't work and I do not have an answer for it, but it's just an example from a book-->
+<!--<Editor.Behaviors>
+            <toolkit:EventToCommandBehavior EventName="Completed" Command="{Binding EditorCompletedCommand}" />
+        </Editor.Behaviors>-->
+
+<!--<Label Text="{Binding LostPasswordExcuse}"
+               FontSize="Small"
+               IsVisible="{Binding EditorContentVisible}"
+               LineBreakMode="WordWrap"
+               Margin="10"
+               x:Name="EditorContents" />-->
+            
